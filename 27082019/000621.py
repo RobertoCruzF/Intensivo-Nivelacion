@@ -8,19 +8,19 @@ print (imagen.dtype,imagen.shape)
 plt.imshow(imagen)									
 plt.show()
 
-plt.imshow(imagen[::-1]) #imagen invertida
+plt.imshow(imagen[::-1]) #imagen invertida y eje y invertido
 plt.show()
 
 
-plt.imshow(imagen[:,::-1]) # Imagen							
+plt.imshow(imagen[:,::-1]) # imnagen inverita y eje x invertido							
 plt.show()
 
-plt.imshow(imagen[50:150,150:280]) # ZOOM	 	
+plt.imshow(imagen[50:150,150:280]) # ZOOM con puntos especificos  	
 
 plt.show()
 
 
-plt.imshow(imagen[::2,::2]) # ALEJA	 	
+plt.imshow(imagen[::2,::2]) # se reducen los ejes hasta la mitad	
 plt.show()
 
 # Matriz imagen
