@@ -1,5 +1,8 @@
 from matplotlib import pyplot as plt 
 
+
+plt.style.use('ggplot') # estilo del grafico
+plt.xkcd() # estilo del grafico
 # defino dos listas
 ages_x = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 
@@ -12,13 +15,13 @@ py_dev_y = [45372, 48876, 53850, 57287, 63016,
 
 # ocurre lo mismo que en el caso anterior
 # el marker define el tipo de punteado que va a tener el grafico en cada uno de sus puntos
-plt.plot(ages_x,py_dev_y,color='#5a7d9a', linewidth=3, label="Python") # la letra b define el color de la linea
+plt.plot(ages_x,py_dev_y, label="Python") # la letra b define el color de la linea
 
 # lista java script
 js_dev_y = [37810, 43515, 46823, 49293, 53437,
             56373, 62375, 66674, 68745, 68746, 74583]
 
-plt.plot(ages_x,js_dev_y,color='#adad3b', linewidth=3, label="JavaScript") # la letra b define el color de la linea
+plt.plot(ages_x,js_dev_y,label="JavaScript") # la letra b define el color de la linea
 
 dev_y = [38496, 42000, 46752, 49320, 53200,
          56000, 62316, 64928, 67317, 68748, 73752]
@@ -33,6 +36,7 @@ plt.ylabel("Median Salary (USD)") # titulo eje y
 plt.title("Median Salary (USD) by Age") # titulo del grafico
 
 plt.legend() 
-plt.grid(True) # cuadriculado en el grafico
 plt.tight_layout()
+
+plt.savefig('plot.png')
 plt.show() # ploteo el grafico
